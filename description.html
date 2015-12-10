@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="FLY Organ Developmental Network">
+    <meta name="author" content="Begum Alaybeyoglu">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>FlyOde</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
+            <script src="js/bootstrap.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h2 class="masthead-brand">FlyOde</h2>
+              <nav>
+                <ul class="nav masthead-nav">
+
+                  <li><a href="./index.html">Home</a></li>
+
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                        <li><a href="./overview.html">Overview</a></li>
+                            <li><a href="./quickguide.html">Quick Guide</a></li>
+                        <li class="active"><a href="./description.html">Description</a></li>
+                        <li><a href="./outlook.html">Outlook</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                            <li><a href="./funding.html">Funding & Legal Notice</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="./faq.html">FAQ</a></li>
+
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+
+              <div class="description">
+
+                      <div class="page-header">
+                <h1 class="about-heading">Description</h1>
+                      </div>
+<p class="lead" id="flyodelead"><em><a>Fly</a>Ode is an elaborately structured poem <a>(network)</a> praising or glorifying an event or individual <a>(fly development)</a>, describing nature intellectually <a>(by temporally and spatially varying interactions)</a> as well as emotionally <a>(through the beauty of the network’s visualization)</a>. Wikipedia <a>(S. Köstler)</a></em></p>
+                      <p>FlyOde is an online community-driven database and tool displaying gene/protein interactions that take place during the development of fly organs. Genes/proteins are shown as nodes and interactions as edges. There are genetic, protein-DNA, and protein-protein interactions (color coded, see legend), which can be positive (arrowhead) or negative (T). Undirected, neutral edges indicating complex formation have neither. The initial network is created with <a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a>, the online module with <a href="http://cytoscapeweb.cytoscape.org/" target="_blank">Cytoscape web</a>. Currently it consists of interactions that take place during eye development of Drosophila melanogaster, but researchers of the respective fields are invited to contribute data on other organs like antenna, wing, leg, Bolwig’s organ and ocellus, as well as on additional species.</p>
+                      <p>The distinguishing feature of FlyOde is the annotation of nodes with their expression pattern which often changes over sequential developmental stages, and the possibility to select or filter the network according to cell type and stage via a pull down menu. Selecting/filtering is inclusive, returning all proteins that display the requested expression pattern, regardless whether a protein is also expressed anywhere else. Selecting highlights nodes, filtering deletes the nodes that do not satisfy the request.</p>
+                      <p>Currently the developmental stages comprise larval development starting at the third instar larva, over pupal stages to the adult, since this is when differentiation of cell types takes place. Larval and pupal stages are further divided into early, intermediate and late. The cell types are photoreceptor cells (PRs) and accessory cells (<a href="img/expression_patterns.png" onclick="window.open('img/expression_patterns.png', 'popup', 'height=650, width=650'); return false;">see table</a>). An alternative annotation of the expression pattern is given as what we call “differentiation level”. It reflects the unique feature of eye development during the larval stages, where the morphogenetic furrow sweeps across the eye imaginal disc to initiate differentiation. Thus, at a given time point cells of different differentiation levels - dependent on their relative position to the morphogenetic furrow - exist simultaneously. Correspondingly, and also due to the easier identification in micrographs, the expression pattern that is given in the literature is often rather in the form anterior, in or posterior to the morphogenetic furrow, than the specific cell type, whose definition is narrower. Therefore, selecting/filtering according to differentiation level gives the genes that are expressed in any of the cell types at the respective differentiation level.
+                      <p>Filters can be combined with the booleans AND, OR and NOT to adjust the displayed network to the researcher’s specific interest. This enables e.g. the definition of a marker gene for a specific cell type at a specific stage.</p>
+                      <p>Additionally, specific nodes can be located in the network via a search box and further information is displayed in the info area at the bottom of the screen. This includes alternative names, the expression pattern, phenotypes of mutant or overexpressing flies, references, a link to the respective <a href="http://flybase.org/" target="_blank">flybase</a> entry, and annotation with GO terms for the categories biological process, molecular function and cellular component, which facilitates highlighting of nodes containing specific terms through the search box to obtain an even more comprehensive perspective.</p>
+                      <p>The network we provide here – even though we hope that it is already helpful at this stage – contains only a fragment of the known nodes, their expression patterns and interactions. To maximize its usefulness its growth is of our highest interest, and we encourage users to contribute to network growth by filling out and submitting a simple form, which is submitted to a curator who updates the network accordingly. The names of the contributors are also given in the annotation.</p>
+                  </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+        </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

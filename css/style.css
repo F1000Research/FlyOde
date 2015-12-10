@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    color: #000000;
+    font-size: 14px;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* The Cytoscape Web container must have its dimensions set. */
+
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: inherit;
+}
+
+#title {
+    width: 100%;
+    height: 1%;
+    float: top;
+}
+
+#cytoscapeweb {
+    text-align: center;
+    vertical-align: middle;
+    width: 90%;
+    height: 71%;
+    float: left;
+    position: fixed;
+    z-index: 1;
+}
+
+#add-annotation {
+    float: right;
+    position: absolute;
+    right: 11%;
+    z-index: 5;
+}
+
+#back-home {
+    float: left;
+    left: 1%;
+    position: fixed;
+    z-index: 5;
+}
+
+#legend {
+    float: left;
+    bottom: 27%;
+    left: 1%;
+    position: fixed;
+    z-index: 5;
+}
+
+.addannotation {
+    padding: 5px 10px;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    font-weight: bold;
+    border: double #777;
+}
+
+#usersinput {
+    width: 10%;
+    height: 72%;
+    background-color: #eee;
+    border-left: solid #777;
+    z-index: 10;
+    position: relative;
+    float: right;
+    display: block;
+    opacity: 0.90;
+    /*    transition: width 0.3s;*/
+}
+
+#usersinput2 {
+    z-index: 10;
+    display: block;
+    width: 92%;
+    height: 100%;
+    float: right;
+    overflow: auto;
+}
+
+#arrowicon {
+    float: left;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    text-align: center;
+}
+
+#arrowfa {
+    float: left;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    text-align: center;
+}
+
+.Centerer {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.Centered {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*#arrowfaicon {
+width: auto;
+    height: auto;
+}*/
+
+#magnifier,
+#arrowfaicon {
+    background-color: transparent;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.1s;
+    text-shadow: none;
+    border: none;
+    padding: 200px 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    z-index: 10;
+}
+
+#magnifier:hover,
+#arrowfaicon:hover {
+    text-decoration: none;
+    color: #ff7518;
+    border: inherit;
+}
+
+#magnifier:active,
+#arrowfaicon:active {
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+}
+
+#hovercontent {
+    display: table;
+}
+
+#rowh, #rowhadd {
+    display: table-row;
+}
+
+#column, #ORcolumn, #column2 {
+    display: table-cell;
+}
+
+#col {
+    display: block;
+    z-index: 10;
+}
+
+#hovercontent2 {
+    display: block;
+    text-align: center;
+    z-index: 10;
+}
+
+#hovercontent3 {
+    display: block;
+    text-align: center;
+    z-index: 10;
+}
+
+#explain {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    z-index: 10;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+}
+
+#explain2 {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    z-index: 10;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+}
+
+#searchprotein {
+    width: 200px;
+    height: 25px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    z-index: 50;
+}
+
+#mainnote {
+
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 25%;
+    display: block;
+    border-top: double #777;
+    background-color: #eee;
+    /*background-color: #FFF7F0;*/
+    overflow: auto;
+    color: #333;
+}
+
+#note {
+    display: block;
+    position: relative;
+    /*background-color: #FFF7F0;*/
+    background-color: #eee;
+    color: #333;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    overflow: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+#note > p > a {
+    color: #2780e3;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#note > p {
+    font-size: 15px;
+    margin: 0 0 4px;
+}
+
+#note2 {
+    position: relative;
+    width: 100%;
+    height: 1.5%;
+    display: block;
+    background-color: #eee;
+    color: #333;
+    margin-top: -1px;
+}
+
+.stage1, .stage2, .differentiation, .localization, .celltype1, .celltype2, .specialization, .subtypes, .bools {
+    z-index: 10;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+}
+
+.organ {
+    z-index: 10;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+}
+
+.button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    color: #ffffff;
+    /*background: #46696E;*/
+    background: #555;
+    text-shadow: none;
+    border: none;
+    height: 32px;
+    line-height: 32px;
+    padding: 0px 25.6px;
+    font-weight: 350;
+    font-size: 16px;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    margin: 10px;
+    margin-top: 30px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    z-index: 10;
+}
+
+/* The next blocks of code are for user actions on the buttons. */
+.button:hover {
+    /*background: #2F545A;*/
+    background: #333;
+    text-decoration: none;
+    color: #ffffff
+}
+
+.button:active {
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.03), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.03), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03)
+}
+
+.addmore {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    color: #ffffff;
+    /*background: #A3BFA8;*/
+    background: #555;
+    text-shadow: none;
+    border: none;
+    height: 15px;
+    line-height: 15px;
+    padding: 0px 5.6px;
+    font-weight: 350;
+    font-size: 14px;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    margin: 1px;
+    margin-left: 3px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block
+}
+
+/* The next blocks of code are for user actions on the buttons. */
+.addmore:hover {
+    /*background: #3A7043;*/
+    background: #333;
+    text-decoration: none;
+    color: #ffffff
+}
+
+.addmore:active {
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.03), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.03), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03)
+}
+
+/* highlight results */
+.ui-autocomplete span.hl_results {
+    background-color: #9AB4A2;
+    /*background-color: #333;*/
+}
+
+/* loading - the AJAX indicator */
+.ui-autocomplete-loading {
+    background: white;
+}
+
+/* scroll results */
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    z-index: 1000;
+}
+
+ul.ui-autocomplete.ui-menu {
+    z-index: 1000;
+}
+
+.ui-autocomplete li {
+    font-size: 13px;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+}
+
+* html .ui-autocomplete {
+    height: 200px;
+}
+
+p {
+    padding: 0 1em;
+    margin: 1px;
+}
+
+p:first-child {
+    padding-top: 0.5em;
+}
